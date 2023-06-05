@@ -1,82 +1,82 @@
 body {
-    font-family: 'lato', sans-serif;
-    font-size: 1.6rem;
-    margin: 0 auto;
-    color: #272a31;
-    background-color: #fff;
+  font-family: 'lato', sans-serif;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  color: #272a31;
+  background-color: #fff;
 }
 
 html {
-    /* 62.5% of 16px = 10px */
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* Typography */
 ::selection {
-    background: crimson;
-    color: #fff;
+  background: crimson;
+  color: #fff;
 }
 
 header {
-    background-color: dodgerblue;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 ul {
-    list-style: none;
-    padding-left: 0.1rem;
+  list-style: none;
+  padding-left: 0.1rem;
 }
 
-#book-app{
-    max-width: 50rem;
+#book-app {
+  max-width: 50rem;
 }
-
 
 /* Buttons */
 button {
-    background-color: dodgerblue;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.6rem;
-    cursor: pointer;
+  background-color: dodgerblue;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
+
 /* Form */
 .book-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 20rem;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  margin: 0 auto;
 }
 
 .items {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0.5rem auto;
-    max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem auto;
+  max-width: 20rem;
 }
 
 input[type=text],
 input[type=text]:focus {
-    max-width: 50rem;
+  max-width: 50rem;
 }
 
 .remove {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    font-size: 1.6rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.6rem;
 }

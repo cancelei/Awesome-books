@@ -1,10 +1,9 @@
 const addBook = document.querySelector('.book-form');
 const bookShelf = document.querySelector('.items');
 
-
 // create a function to render the book
 const generateBook = (bookTitle, bookAuthor) => {
-    html = ` 
+  const html = ` 
  <article class="book-list">
         <ul class="book-details" >
             <li class="title-list">
@@ -20,35 +19,30 @@ const generateBook = (bookTitle, bookAuthor) => {
         </ul>
         <button type="submit" class="remove">Remove</button>
     </article>
-  `
+  `;
 
-    bookShelf.innerHTML += html;
-}
-
-
-
+  bookShelf.innerHTML += html;
+};
 
 // add event listener to the form
 addBook.addEventListener('submit', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const bookTitle = addBook.title.value.trim();
-    const bookAuthor = addBook.author.value.trim();
-    console.log(bookTitle, bookAuthor);
+  const bookTitle = addBook.title.value.trim();
+  const bookAuthor = addBook.author.value.trim();
 
-    // check if the input is not empty
-    if(bookTitle.length && bookAuthor.length){
-        generateBook(bookTitle, bookAuthor);
+  // check if the input is not empty
+  if (bookTitle.length && bookAuthor.length) {
+    generateBook(bookTitle, bookAuthor);
 
-        //reset the form
-        addBook.reset();
-    }
-
+    // reset the form
+    addBook.reset();
+  }
 });
 
 // remove the book from the list
 bookShelf.addEventListener('click', (e) => {
-    if(e.target.classList.contains('remove')){
-        e.target.parentElement.remove();
-    }
+  if (e.target.classList.contains('remove')) {
+    e.target.parentElement.remove();
+  }
 });
