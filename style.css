@@ -1,0 +1,64 @@
+body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0.1rem;
+}
+
+#book-app {
+  max-width: 50rem;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* Form */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem auto;
+  max-width: 20rem;
+}
+
+input[type=text],
+input[type=text]:focus {
+  max-width: 50rem;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
