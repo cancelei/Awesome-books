@@ -28,9 +28,7 @@ const renderBooks = () => {
 
 renderBooks();
 
-addBook.addEventListener('submit', (e) => {
-  e.preventDefault();
-
+function addBookToCollection() {
   const bookTitle = addBook.title.value.trim();
   const bookAuthor = addBook.author.value.trim();
 
@@ -38,16 +36,21 @@ addBook.addEventListener('submit', (e) => {
     bookCollection.push({ title: bookTitle, author: bookAuthor });
     localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
     renderBooks();
-
-    addBook.reset();
   }
+}
+
+addBook.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addBookToCollection();
 });
 
-bookShelf.addEventListener('click', (e) => {
+function handleBookRemoval(e) {
   if (e.target.classList.contains('remove')) {
     const { index } = e.target.dataset;
     bookCollection.splice(index, 1);
     localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
     renderBooks();
   }
-});
+}
+
+bookShelf.addEventListener('click', handleBookRemoval);
