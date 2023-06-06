@@ -1,6 +1,14 @@
 const addBook = document.querySelector('.book-form');
 const bookShelf = document.querySelector('.items');
 
+const bookCollection = [];
+localStorage.setItem('bookCollection', JSON.stringify(bookCollection))
+
+const store = localStorage.getItem('bookCollection')
+
+
+
+
 // create a function to render the book
 const generateBook = (bookTitle, bookAuthor) => {
   const html = ` 
@@ -34,6 +42,10 @@ addBook.addEventListener('submit', (e) => {
   // check if the input is not empty
   if (bookTitle.length && bookAuthor.length) {
     generateBook(bookTitle, bookAuthor);
+
+    bookCollection.push(bookTitle, bookAuthor);
+    console.log(bookCollection);
+
 
     // reset the form
     addBook.reset();

@@ -1,9 +1,7 @@
 body {
-  font-family: 'lato', sans-serif;
   font-size: 1.6rem;
   margin: 0 auto;
-  color: #272a31;
-  background-color: #fff;
+
 }
 
 html {
@@ -12,22 +10,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Typography */
-::selection {
-  background: crimson;
-  color: #fff;
-}
-
 header {
-  background-color: dodgerblue;
-  color: #fff;
   padding: 1rem;
   text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: white;
 }
 
 ul {
@@ -41,8 +26,6 @@ ul {
 
 /* Buttons */
 button {
-  background-color: dodgerblue;
-  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.6rem;
