@@ -161,7 +161,7 @@ Please note that it may take a few moments for GitHub Pages to build and deploy 
 
 - GitHub: [@cancelei](https://github.com/cancelei)
 - Twitter: [@cancelei](https://twitter.com/cancelei/)
-- LinkedIn: [muhammad-salihu-27467a165](https://linkedin.com/in/gbannwart/)
+- LinkedIn: [gbannwart](https://linkedin.com/in/gbannwart/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
