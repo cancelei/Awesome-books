@@ -1,5 +1,5 @@
 <div align="center">
- <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" />
+ <!-- <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <h3><b>HTML, CSS and JavaScript Capstone</b></h3>
 </div>
 
@@ -62,16 +62,16 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
-<p>For Live demo click
-<a href="https://github.com/cancelei/Awesome-books.git"> here </a></p>
+<!-- <p>For Live demo click
+<a href="https://github.com/cancelei/Awesome-books.git"> here </a></p> -->
 
-## 🚀 Live Video <a name="live-video"></a>
+<!-- ## 🚀 Live Video <a name="live-video"></a> -->
 
-<p>For Live video presentation click
+<!-- <p>For Live video presentation click
 <a href="https://drive.google.com/drive/"> here </a></p>
-## 💻 Getting Started <a name="getting-started"></a>
+## 💻 Getting Started <a name="getting-started"></a> -->
 
 To get a local copy up and running, follow these steps.
 
