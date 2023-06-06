@@ -45,7 +45,7 @@ addBook.addEventListener('submit', (e) => {
 
 bookShelf.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
-    const index = e.target.dataset.index;
+    const { index } = e.target.dataset;
     bookCollection.splice(index, 1);
     localStorage.setItem('bookCollection', JSON.stringify(bookCollection));
     renderBooks();
