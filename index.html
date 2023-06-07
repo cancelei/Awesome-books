@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <nav>
+    <h1><a href="#books-list">Awesome</a></h1>
+    <ul>
+      <li><a href="#books-list">List</a></li>
+      <li><a href="#add-book">Add New</a></li>
+      <li><a href="#contact-info">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 <div id="book-app">
-  <header>
-    <h1>All awesome Books</h1>
-  </header>
+
+    <h2>All awesome Books</h2>
+
 
 <!-- Book list Added using Javascript -->
   <div class="items">
@@ -28,6 +38,29 @@
     <button type="submit" id="add">Add</button>
   </form>
   </div>
+
+    <!-- Contact info section -->
+<section class="contact hidden">
+    <h2>Contact Information</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+      blanditiis odio optio rerum vitae voluptate</p>
+  <ul>
+    <li><a href="mailto:">Our e-mail mail@email.com</a></li>
+    <li><a href="tel:">Our phone number: 123456789</a></li>
+    <li>
+      <address>
+        Our address:
+        123 Street Name
+        City, State 12345
+        Country
+      </address>
+    </li>
+  </ul>
+</section>
+
+<footer>
+<p>&copy;Copyright 2023  <a href=""> The Readers </a> - All Rights Reserved</p>
+</footer>
 
   <script src="app.js"></script>
 </body>
