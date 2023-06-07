@@ -17,10 +17,28 @@ header {
 ul {
   list-style: none;
   padding-left: 0.1rem;
+  display: flex;
+  gap: 1rem;
 }
 
-#book-app {
-  max-width: 50rem;
+li {
+  font-size: 1.6rem;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 44rem;
+  gap: 20rem;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.book-list:nth-child(odd) {
+  background-color: lightgray;
 }
 
 /* Buttons */
@@ -28,24 +46,38 @@ button {
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.6rem;
+  width: 8rem;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+#add {
+  position: relative;
+  left: 15rem;
 }
 
 /* Form */
 .book-form {
   display: flex;
   flex-direction: column;
-  max-width: 20rem;
-  margin: 0 auto;
+  justify-content: center;
+  max-width: 23rem;
+  margin: 3rem auto;
+  text-align: center;
 }
 
 .items {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0.5rem auto;
-  max-width: 20rem;
+  max-width: 46rem;
+  border: 3px solid grey;
+  height: 100%;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 input[type=text],
