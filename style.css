@@ -25,10 +25,6 @@ li {
   font-size: 1.6rem;
 }
 
-.book-list:nth-child(odd) {
-  background-color: lightgray;
-}
-
 .book-list {
   display: flex;
   justify-content: space-around;
@@ -38,6 +34,10 @@ li {
   max-width: 44rem;
   gap: 20rem;
   border-radius: 10px;
+}
+
+.book-list:nth-child(odd) {
+  background-color: lightgray;
 }
 
 /* Buttons */
@@ -77,7 +77,6 @@ button {
   overflow: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
 }
 
 input[type=text],
