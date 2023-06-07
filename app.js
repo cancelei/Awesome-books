@@ -30,7 +30,7 @@ class BookCollection {
               <span>"${book.title}"</span>
             </li>
             <li class="author-list">
-              <span>  by ${book.author}</span>
+              <span> by ${book.author}</span>
             </li>
           </ul>
           <button type="submit" class="remove" data-index="${index}">Remove</button>
