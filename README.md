@@ -1,6 +1,6 @@
 <div align="center">
  <!-- <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" /> -->
-  <h3><b>HTML, CSS and JavaScript Capstone</b></h3>
+  <h3><b>HTML, CSS and JavaScript Book List Storage Website</b></h3>
 </div>
 
 # 📗 Table of Contents
@@ -26,9 +26,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 <a name="about-project">HTML, CSS and JavaScript Capstone</a>
+# 📖 <a name="about-project">HTML, CSS and JavaScript Book List Storage Website</a>
 
-**[HTML, CSS and JavaScript Capstone]** is aN HTML, CSS and JavaScript prject to showcase my HTML, CSS, JavaScript and GitHub Knowledge
+**[HTML, CSS and JavaScript Capstone]** is an HTML, CSS and JavaScript prject to showcase my HTML, CSS, JavaScript and GitHub Knowledge
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,9 +56,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Header]**
-- **[Main Section (Book list)]**
-- **[Form Section]**
+- **Semantic HTML Tags with content for each corresponding Section**
+- **Inputfields that store information using a class and its corresponding methods**
+- **Reworked CSS Styling, UI improvements**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,7 +167,7 @@ Please note that it may take a few moments for GitHub Pages to build and deploy 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Layout improvement, transition and animation to improve user experience future
+- Layout improvement, Navigation and Improved Header and Footer Sections.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
