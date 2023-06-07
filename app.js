@@ -11,6 +11,7 @@ class BookCollection {
 
   loadBookCollection() {
     const store = localStorage.getItem('bookCollection');
+    this.bookCollection = JSON.parse(store);
     return JSON.parse(store);
   }
 
@@ -64,4 +65,5 @@ class BookCollection {
   }
 }
 
-const bookCollectionApp = new BookCollection();
+const bookcollectionApp = new BookCollection();
+bookcollectionApp();
