@@ -26,10 +26,10 @@ class BookCollection {
         <article class="book-list">
           <ul class="book-details">
             <li class="title-list">
-              <span>${book.title}</span>
+              <span>"${book.title}"</span>
             </li>
             <li class="author-list">
-              <span>${book.author}</span>
+              <span>  by ${book.author}</span>
             </li>
           </ul>
           <button type="submit" class="remove" data-index="${index}">Remove</button>
@@ -49,6 +49,8 @@ class BookCollection {
       this.bookCollection.push({ title: bookTitle, author: bookAuthor });
       this.saveBookCollection();
       this.renderBooks();
+
+      this.addBookForm.reset();
     }
   }
 
