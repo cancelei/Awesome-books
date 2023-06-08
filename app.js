@@ -2,6 +2,7 @@ class BookCollection {
   static init() {
     this.addBookForm = document.querySelector('.book-form');
     this.bookShelf = document.querySelector('.items');
+    this.list = document.querySelector('#itemList');
     this.bookCollection = this.loadBookCollection() || [];
 
     this.renderBooks();
@@ -50,6 +51,7 @@ class BookCollection {
       this.bookCollection.push({ title: bookTitle, author: bookAuthor });
       this.saveBookCollection();
       this.renderBooks();
+      this.list.classList.remove('hidden');
 
       this.addBookForm.reset();
     }
