@@ -67,3 +67,42 @@ class BookCollection {
 
 const bookcollectionApp = new BookCollection();
 bookcollectionApp();
+
+// Creating the Navigation functionallity
+
+// Nav items
+const nav_list = document.querySelector('.nav_list');
+const nav_add = document.querySelector('.nav_add');
+const nav_contact = document.querySelector('.nav_contact');
+
+// Section Classes
+const items = document.querySelector('.items');
+const book_form = document.querySelector('.book_form');
+const contact = document.querySelector('.contact');
+
+//  Navigation Event listeners
+
+
+const navigation = document.querySelector('.navigation');
+
+// navigation.addEventListener('click', () => {
+  
+// })
+
+nav_list.addEventListener('click', () => {
+  items.classList.remove('hidden');
+  book_form.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+nav_add.addEventListener('click', () => {
+  book_form.classList.remove('hidden');
+  items.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+contact.addEventListener('click', () => {
+  contact.classList.remove('hidden');
+  book_form.classList.add('hidden');
+  items.classList.toggle('hidden');
+})

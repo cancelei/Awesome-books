@@ -57,8 +57,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Semantic HTML Tags with content for each corresponding Section**
-- **Inputfields that store information using a class and its corresponding methods**
-- **Reworked CSS Styling, UI improvements**
+- **Reworked CSS Styling, UI improvements for Contact, Add New book and List of books.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,7 +166,9 @@ Please note that it may take a few moments for GitHub Pages to build and deploy 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Layout improvement, Navigation and Improved Header and Footer Sections.
+- Full Website with improved Layout, Navigation, broader color pallets, animations and transitions.
+- Improved way of storage.
+- Login Section with signup and login pages.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

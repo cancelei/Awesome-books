@@ -101,7 +101,7 @@ button {
 }
 
 /* Form */
-.book-form {
+.book_form {
   display: flex;
   flex-direction: column;
   justify-content: center;
