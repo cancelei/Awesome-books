@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Muhammad Aminu Salihu & Glauber Bannwart">
+  <title>Awesome Book Store - The Readers #1 Online Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+html {
+  /* 62.5% of 16px = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  color: black;
+  padding: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0.1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+li {
+  font-size: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #111;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 44rem;
+  gap: 20rem;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.book-list:nth-child(odd) {
+  background-color: lightgray;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  width: 8rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#add {
+  position: relative;
+  left: 15rem;
+}
+
+/* Form */
+.book_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 23rem;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem auto;
+  max-width: 46rem;
+  border: 3px solid grey;
+  height: 100%;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+input[type=text],
+input[type=text]:focus {
+  max-width: 50rem;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  color: black;
+  text-align: center;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <h1><a href="#books-list">Awesome</a></h1>
+      <ul>
+        <li><a class="nav_list" href="#books-list">List</a></li>
+        <li><a class="nav_add" href="#add-book">Add New</a></li>
+        <li><a class="nav_contact" href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="book-app">
+
+    <h2>All awesome Books</h2>
+
+    <!-- Book list Added using Javascript -->
+    <div class="items">
+
+    </div>
+
+    <!-- Form/Input section -->
+    <form class="book_form hidden">
+      <h2 class="form-heading">Add a new book</h2>
+      <input type="text" id="book-title" name="title" placeholder="Book Title">
+      <input type="text" id="book-author" name="author" placeholder="Book Author">
+      <button type="submit" id="add">Add</button>
+    </form>
+  </main>
+
+  <!-- Contact info section -->
+  <section class="contact hidden">
+    <h2>Contact Information</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+      blanditiis odio optio rerum vitae voluptate</p>
+    <ul>
+      <li><a href="mailto:">Our e-mail mail@email.com</a></li>
+      <li><a href="tel:">Our phone number: 123456789</a></li>
+      <li>
+        <address>
+          Our address:
+          123 Street Name
+          City, State 12345
+          Country
+        </address>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy;Copyright 2023 <a href=""> The Readers </a> - All Rights Reserved</p>
+  </footer>
+
+  <script>
+    class BookCollection {
+  constructor() {
+    this.addBookForm = document.querySelector('.book-form');
+    this.bookShelf = document.querySelector('.items');
+    this.bookCollection = this.loadBookCollection() || [];
+
+    this.renderBooks();
+    this.addBookForm.addEventListener('submit', this.addBookToCollection.bind(this));
+    this.bookShelf.addEventListener('click', this.handleBookRemoval.bind(this));
+  }
+
+  loadBookCollection() {
+    const store = localStorage.getItem('bookCollection');
+    this.bookCollection = JSON.parse(store);
+    return JSON.parse(store);
+  }
+
+  saveBookCollection() {
+    localStorage.setItem('bookCollection', JSON.stringify(this.bookCollection));
+  }
+
+  renderBooks() {
+    this.bookShelf.innerHTML = '';
+
+    this.bookCollection.forEach((book, index) => {
+      const html = `
+        <article class="book-list">
+          <ul class="book-details">
+            <li class="title-list">
+              <span>"${book.title}"</span>
+            </li>
+            <li class="author-list">
+              <span> by ${book.author}</span>
+            </li>
+          </ul>
+          <button type="submit" class="remove" data-index="${index}">Remove</button>
+        </article>
+      `;
+
+      this.bookShelf.innerHTML += html;
+    });
+  }
+
+  addBookToCollection(e) {
+    e.preventDefault();
+    const bookTitle = this.addBookForm.title.value.trim();
+    const bookAuthor = this.addBookForm.author.value.trim();
+
+    if (bookTitle.length && bookAuthor.length) {
+      this.bookCollection.push({ title: bookTitle, author: bookAuthor });
+      this.saveBookCollection();
+      this.renderBooks();
+
+      this.addBookForm.reset();
+    }
+  }
+
+  handleBookRemoval(e) {
+    if (e.target.classList.contains('remove')) {
+      const { index } = e.target.dataset;
+      this.bookCollection.splice(index, 1);
+      this.saveBookCollection();
+      this.renderBooks();
+    }
+  }
+}
+
+const bookcollectionApp = new BookCollection();
+bookcollectionApp();
+
+// Creating the Navigation functionallity
+
+// Nav items
+const nav_list = document.querySelector('.nav_list');
+const nav_add = document.querySelector('.nav_add');
+const nav_contact = document.querySelector('.nav_contact');
+
+// Section Classes
+const items = document.querySelector('.items');
+const book_form = document.querySelector('.book_form');
+const contact = document.querySelector('.contact');
+
+//  Navigation Event listeners
+
+
+const navigation = document.querySelector('.navigation');
+
+// navigation.addEventListener('click', () => {
+  
+// })
+
+nav_list.addEventListener('click', () => {
+  items.classList.remove('hidden');
+  book_form.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+nav_add.addEventListener('click', () => {
+  book_form.classList.remove('hidden');
+  items.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+contact.addEventListener('click', () => {
+  contact.classList.remove('hidden');
+  book_form.classList.add('hidden');
+  items.classList.toggle('hidden');
+})
+  </script>
+</body>
+
+</html>

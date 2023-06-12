@@ -1,7 +1,8 @@
 class BookCollection {
-  constructor() {
+  static init() {
     this.addBookForm = document.querySelector('.book-form');
     this.bookShelf = document.querySelector('.items');
+    this.list = document.querySelector('#itemList');
     this.bookCollection = this.loadBookCollection() || [];
 
     this.renderBooks();
@@ -9,17 +10,17 @@ class BookCollection {
     this.bookShelf.addEventListener('click', this.handleBookRemoval.bind(this));
   }
 
-  loadBookCollection() {
+  static loadBookCollection() {
     const store = localStorage.getItem('bookCollection');
     this.bookCollection = JSON.parse(store);
     return JSON.parse(store);
   }
 
-  saveBookCollection() {
+  static saveBookCollection() {
     localStorage.setItem('bookCollection', JSON.stringify(this.bookCollection));
   }
 
-  renderBooks() {
+  static renderBooks() {
     this.bookShelf.innerHTML = '';
 
     this.bookCollection.forEach((book, index) => {
@@ -41,7 +42,7 @@ class BookCollection {
     });
   }
 
-  addBookToCollection(e) {
+  static addBookToCollection(e) {
     e.preventDefault();
     const bookTitle = this.addBookForm.title.value.trim();
     const bookAuthor = this.addBookForm.author.value.trim();
@@ -50,12 +51,13 @@ class BookCollection {
       this.bookCollection.push({ title: bookTitle, author: bookAuthor });
       this.saveBookCollection();
       this.renderBooks();
+      this.list.classList.remove('hidden');
 
       this.addBookForm.reset();
     }
   }
 
-  handleBookRemoval(e) {
+  static handleBookRemoval(e) {
     if (e.target.classList.contains('remove')) {
       const { index } = e.target.dataset;
       this.bookCollection.splice(index, 1);
@@ -65,5 +67,31 @@ class BookCollection {
   }
 }
 
-const bookcollectionApp = new BookCollection();
-bookcollectionApp();
+BookCollection.init();
+
+const navList = document.querySelector('#nav_list');
+const navAdd = document.querySelector('#nav_add');
+const navContact = document.querySelector('#nav_contact');
+
+const list = document.querySelector('#itemList');
+const form = document.querySelector('#form');
+const contact = document.querySelector('#contactsection');
+// console.log(nav_contact, nav_add, nav_list);
+
+navList.addEventListener('click', () => {
+  list.classList.remove('hidden');
+  form.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+navAdd.addEventListener('click', () => {
+  form.classList.remove('hidden');
+  list.classList.add('hidden');
+  contact.classList.add('hidden');
+});
+
+navContact.addEventListener('click', () => {
+  contact.classList.remove('hidden');
+  form.classList.add('hidden');
+  list.classList.add('hidden');
+});
