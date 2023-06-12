@@ -37,7 +37,6 @@
     "autoprefixer": "^9.8.8",
     "available-typed-arrays": "^1.0.5",
     "axe-core": "^4.7.2",
-    "babel-eslint": "^10.1.0",
     "bail": "^1.0.5",
     "balanced-match": "^1.0.2",
     "base64-js": "^1.5.1",
@@ -145,11 +144,8 @@
     "escape-goat": "^2.1.1",
     "escape-string-regexp": "^1.0.5",
     "escodegen": "^2.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-module-utils": "^2.8.0",
-    "eslint-plugin-import": "^2.27.5",
     "eslint-scope": "^5.1.1",
     "eslint-utils": "^2.1.0",
     "eslint-visitor-keys": "^3.4.1",
@@ -225,7 +221,6 @@
     "has-tostringtag": "^1.0.0",
     "has-unicode": "^2.0.1",
     "has-yarn": "^2.1.0",
-    "hint": "^7.1.9",
     "hosted-git-info": "^6.1.1",
     "html-encoding-sniffer": "^3.0.0",
     "html-tags": "^3.3.1",
@@ -508,12 +503,12 @@
     "sprintf-js": "^1.0.3",
     "ssri": "^10.0.4",
     "statuses": "^2.0.1",
+    "string_decoder": "^1.3.0",
     "string-width": "^4.2.3",
     "string-width-cjs": "^4.2.3",
     "string.prototype.trim": "^1.2.7",
     "string.prototype.trimend": "^1.0.6",
     "string.prototype.trimstart": "^1.0.6",
-    "string_decoder": "^1.3.0",
     "strip-ansi": "^6.0.1",
     "strip-ansi-cjs": "^6.0.1",
     "strip-bom": "^3.0.0",
@@ -523,7 +518,6 @@
     "strnum": "^1.0.5",
     "strtok3": "^6.3.0",
     "style-search": "^0.1.0",
-    "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^4.0.0",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
@@ -607,7 +601,6 @@
     "yauzl": "^2.10.0",
     "zwitch": "^1.0.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -616,5 +609,11 @@
     "Tests"
   ],
   "author": "Glauber Bannwart",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5"
+  }
 }
