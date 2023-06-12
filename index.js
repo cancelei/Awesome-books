@@ -1,4 +1,4 @@
-import BookCollection from './Modules/app.js';
+import BookCollection from './Module/app.js';
 
 const navList = document.querySelector('#nav_list');
 const navAdd = document.querySelector('#nav_add');
