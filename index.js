@@ -15,7 +15,6 @@ const navContact = document.querySelector('#nav_contact');
 const list = document.querySelector('#itemList');
 const form = document.querySelector('#form');
 const contact = document.querySelector('#contactsection');
-// console.log(nav_contact, nav_add, nav_list);
 
 navList.addEventListener('click', () => {
   list.classList.remove('hidden');

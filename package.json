@@ -1,6 +1,7 @@
 {
   "name": "awesome-books",
   "version": "1.0.0",
+  "type": "module",
   "description": "<div align=\"center\">\r  <!-- <img src=\"./images/murple_logo.png\" alt=\"logo\" width=\"140\"  height=\"auto\" /> -->\r   <h3><b>HTML, CSS and JavaScript Book List Storage Website</b></h3>\r </div>",
   "main": "(index.js)",
   "dependencies": {
@@ -616,6 +617,5 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5"
-  },
-  "type": "module"
+  }
 }
