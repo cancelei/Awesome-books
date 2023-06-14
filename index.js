@@ -1,7 +1,6 @@
-import { DateTime } from 'luxon';
-import BookCollection from './Modules/app.js';
+import { DateTime } from './node_modules/luxon/build/es6/luxon.js';
 
-// const timestamp = document.getElementsByClassName('date').appendChild(luxon.now());
+import BookCollection from './Modules/app.js';
 
 const now = DateTime.now();
 
