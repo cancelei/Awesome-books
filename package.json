@@ -2,7 +2,7 @@
   "name": "awesome-books",
   "version": "1.0.0",
   "description": "<div align=\"center\">\r  <!-- <img src=\"./images/murple_logo.png\" alt=\"logo\" width=\"140\"  height=\"auto\" /> -->\r   <h3><b>HTML, CSS and JavaScript Book List Storage Website</b></h3>\r </div>",
-  "main": "(index.html)",
+  "main": "(index.js)",
   "dependencies": {
     "abab": "^2.0.6",
     "abbrev": "^1.1.1",
@@ -309,7 +309,7 @@
     "keyv": "^4.5.2",
     "kind-of": "^6.0.3",
     "known-css-properties": "^0.21.0",
-    "latest-version": "^5.1.0",
+    "latest-version": "^7.0.0",
     "lcid": "^3.1.1",
     "levn": "^0.4.1",
     "lines-and-columns": "^1.2.4",
@@ -400,7 +400,7 @@
     "p-try": "^2.2.0",
     "pac-proxy-agent": "^5.0.0",
     "pac-resolver": "^5.0.1",
-    "package-json": "^6.5.0",
+    "package-json": "^8.1.0",
     "parent-module": "^1.0.1",
     "parse-entities": "^2.0.0",
     "parse-json": "^5.2.0",
@@ -563,7 +563,7 @@
     "universalify": "^2.0.0",
     "unpipe": "^1.0.0",
     "update-browserslist-db": "^1.0.11",
-    "update-notifier": "^5.1.0",
+    "update-notifier": "^6.0.2",
     "uri-js": "^4.4.1",
     "url-parse": "^1.5.10",
     "url-parse-lax": "^3.0.0",
@@ -616,5 +616,6 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5"
-  }
+  },
+  "type": "module"
 }

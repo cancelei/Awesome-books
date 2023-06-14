@@ -1,16 +1,13 @@
-import BookCollection from '/Modules/app.js';
-import * as luxon from '/Modules/luxon.js';
+import { DateTime } from 'luxon';
+import BookCollection from './Modules/app.js';
 
 // const timestamp = document.getElementsByClassName('date').appendChild(luxon.now());
 
-const now = luxon.DateTime.now();
+const now = DateTime.now();
 
-const timeDiv = document.getElementById('time');
+const timeDiv = document.querySelector('#time');
 const timeNode = document.createTextNode(now.toLocaleString());
 timeDiv.appendChild(timeNode);
-
-
-
 
 const navList = document.querySelector('#nav_list');
 const navAdd = document.querySelector('#nav_add');
