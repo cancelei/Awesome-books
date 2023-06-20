@@ -5,6 +5,9 @@
 
 # 📗 Table of Contents
 
+
+
+
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -34,7 +37,7 @@
 
 1-HTML.
 2-CSS.
-3-JavaScript.
+3-JavaScript (5 & 6).
 3-LINTERS.
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -56,9 +59,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Semantic HTML Tags with content for each corresponding Section**
-- **Inputfields that store information using a class and its corresponding methods**
-- **Reworked CSS Styling, UI improvements**
+- **JS with import/export and a Modules folder (modular architecture).**
+- **A main class and its corresponding methods, and other functions to make the APP work.**
+- **Reworked CSS Styling, UI improvements and UX (after inserting a book, it will move the user to the book list)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,14 +163,13 @@ Please note that it may take a few moments for GitHub Pages to build and deploy 
 👤 **Glauber Bannwart**
 
 - GitHub: [@cancelei](https://github.com/cancelei)
-- Twitter: [@cancelei](https://twitter.com/cancelei/)
 - LinkedIn: [gbannwart](https://linkedin.com/in/gbannwart/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Layout improvement, Navigation and Improved Header and Footer Sections.
+- More Features, User Login, User Data Storage, Layout improvement.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
